@@ -97,26 +97,33 @@ window.addEventListener('scroll', () => {
   });
 });
 
-document.getElementById('lang-toggle').addEventListener('click', function() {
-  const currentLang = this.textContent;
-  const newLang = currentLang === 'EN' ? 'RU' : 'EN';  
+document.addEventListener('DOMContentLoaded', function() {
+  const langToggle = document.getElementById('lang-toggle');  
 
-  document.querySelectorAll('[data-lang="ru"]').forEach(el => {
-    el.style.display = newLang === 'RU' ? 'block' : 'none';
+  const savedLang = localStorage.getItem('lang') || 'ru';
+  document.body.classList.toggle('en', savedLang === 'en');  
+  
+  updateButton(savedLang);  
+ 
+  langToggle.addEventListener('click', function() {
+    const isEn = document.body.classList.toggle('en');
+    const lang = isEn ? 'en' : 'ru';
+    localStorage.setItem('lang', lang);
+    updateButton(lang);    
+    
+    forceRedraw();
   });
   
-  document.querySelectorAll('[data-lang="en"]').forEach(el => {
-    el.style.display = newLang === 'EN' ? 'block' : 'none';
-  });
+  function updateButton(lang) {
+  document.getElementById('lang-toggle').textContent = lang === 'en' ? 'RU' : 'EN';
+}
   
-  this.textContent = newLang;  
-
-  localStorage.setItem('preferredLang', newLang);
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-  const savedLang = localStorage.getItem('preferredLang') || 'RU';
-  if (savedLang === 'EN') {
-    document.getElementById('lang-toggle').click();
+  function forceRedraw() {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.style.display = 'none';
+      setTimeout(() => {
+        el.style.display = '';
+      }, 50);
+    });
   }
 });

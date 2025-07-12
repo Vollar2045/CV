@@ -6,6 +6,8 @@ body {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 page-wrapper {
@@ -104,7 +106,7 @@ a.scroll-top-btn:hover {
 
 .quick-link {
   position: absolute;
-  width: 120px;
+  width: 130px;
   padding: 10px 15px; 
   background: rgba(255, 255, 255, 0.95);
   border-radius: 25px;
@@ -359,11 +361,18 @@ a:hover::after {
     --angle: 0;
     --angle-step: 0;
   }
+   body.en [data-lang="en"] {
+    display: block !important;
+    position: static !important;
+    height: auto !important;
+    opacity: 1 !important;
+  }
+}
 
 #lang-toggle {
   position: fixed;  
   top: 20px;     
-  right: 20px;     
+  left: 20px;     
   z-index: 1000;   
   padding: 8px 16px;
   background: #3498db;
@@ -386,11 +395,22 @@ a:hover::after {
   display: none !important;
 }
 
+[data-lang="en"] { 
+  display: none; 
+}
+
+body.en [data-lang="en"] {
+  display: block !important;
+  animation: fadeIn 0.5s ease;
+}
+
 body.en [data-lang="ru"] {
   display: none !important;
 }
-body.en [data-lang="en"] {
-  display: block !important;
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
   @media (max-width: 480px) {
@@ -405,7 +425,7 @@ body.en [data-lang="en"] {
     font-size: 16px;
     margin-right: 8px;
   }
-}
+
 
 @media print {
   body { padding: 0; }
