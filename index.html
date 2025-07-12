@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Резюме Владислава Алескина</title>
+    <button id="lang-toggle">RU</button>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libertinus+Mono&family=Manufacturing+Consent&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
@@ -58,6 +59,7 @@
                 <circle cx="60%" cy="50%" r="23" fill="#85cbfa" opacity="1" mask="url(#ring-mask)"/>                           
     </svg>
   </div>
+
   <div class="user-photo">
       <svg viewBox="0 0 200 200" class="circle-mask">
         <defs>
@@ -69,120 +71,154 @@
         preserveAspectRatio="xMidYMid slice"/>
       </svg>
     </div>
+
     <div class="quick-links">
   <a href="#about" class="quick-link">
-    <i class="fas fa-user"></i> Обо мне
+    <i class="fas fa-user"></i><span data-lang="ru"> Обо мне</span><span data-lang="en" hidden> About me</span>
   </a>
   <a href="#experience" class="quick-link">
-    <i class="fas fa-briefcase"></i> Опыт
-  </a>
-  <a href="#languages" class="quick-link">
-    <i class="fas fa-language"></i> Языки
-  </a>
-  <a href="#hobbies" class="quick-link">
-    <i class="fas fa-heart"></i> Хобби
-  </a>
-  <a href="#achievements" class="quick-link">
-    <i class="fas fa-trophy"></i> Достижения
-  </a>
-  <a href="#contacts" class="quick-link">
-    <i class="fas fa-envelope"></i> Контакты
+    <i class="fas fa-briefcase"></i><span data-lang="ru"> Опыт</span><span data-lang="en" hidden> Experience</span>
   </a>
   <a href="#education" class="quick-link">
-    <i class="fas fa-graduation-cap"></i> Образование
+    <i class="fas fa-graduation-cap"></i><span data-lang="ru"> Образование</span><span data-lang="en" hidden> Education</span>
+  </a>
+  <a href="#achievements" class="quick-link">
+    <i class="fas fa-trophy"></i><span data-lang="ru"> Достижения</span><span data-lang="en" hidden> Achievements</span>
   </a>
   <a href="#skills" class="quick-link">
-    <i class="fa-sharp fa-solid fa-star"></i> Навыки
+    <i class="fa-sharp fa-solid fa-star"></i><span data-lang="ru"> Навыки</span><span data-lang="en" hidden> Skills</span>
   </a>
-</div>
+  <a href="#languages" class="quick-link">
+    <i class="fas fa-language"></i><span data-lang="ru"> Языки</span><span data-lang="en" hidden> Languages</span>
+  </a>
+  <a href="#hobbies" class="quick-link">
+    <i class="fas fa-heart"></i><span data-lang="ru"> Хобби</span><span data-lang="en" hidden> Hobbies</span>
+  </a>  
+  <a href="#contacts" class="quick-link">
+    <i class="fas fa-envelope"></i><span data-lang="ru"> Контакты</span><span data-lang="en" hidden> Contacts</span>
+  </a>
 
+</div>
     <div class="container">                
         <header>
-            <h1>Алескин Владислав Евгеньевич</h1>
+            <h1>
+                <span data-lang="ru">Алескин Владислав Евгеньевич</span>
+                <span data-lang="en" hidden>Vladislav Aleskin</span>
+            </h1>
         </header>
         <main>         
             <section id="about" class="about">
-                <h2><i class="fas fa-user"></i> Обо мне</h2>
-                <p>Junior C++/C# разработчик с пониманием основ алгоритмов и ООП, умеющий работать в команде.</p>
+                <h2>
+                <i class="fas fa-user"></i>
+                <span data-lang="ru">Обо мне</span>
+                <span data-lang="en" hidden>About me</span>
+                </h2>                     
+                <p><span data-lang="ru">Junior C++/C# разработчик с пониманием основ алгоритмов и ООП, умеющий работать в команде.</span></p>
+                <p><span data-lang="en" hidden>Junior C++/C# developer with strong understanding of algorithms and OOP, who is ready for teamwork.</span></p>
             </section>
+
             <section id="experience" class="experience">
-                <h2><i class="fa-sharp fa-solid fa-check"></i> Практический опыт</h2>
+                <h2><i class="fa-sharp fa-solid fa-check"></i><span data-lang="ru">Практический опыт</span><span data-lang="en" hidden>Experience</span></h2>
                 <div class="project">
-                    <h3>Курсовой проект: "База данных "Пациенты"</h3>
-                    <p><strong>Период:</strong> февраль 2025 - май 2025</p>
-                    <p><strong>Технологии:</strong> C++</p>
+                    <h3><span data-lang="ru">Курсовой проект: "База данных "Пациенты"</span><span data-lang="en" hidden>Term project: "Database "Patients"</span></h3>
+                    <p>
+                    <span data-lang="ru"><strong>Период:</strong> февраль 2025 - май 2025</span>
+                    <span data-lang="en" hidden><strong>Time:</strong> Feb 2025 - May 2025</span>
+                    </p>
+                    <p><span data-lang="ru"><strong>Технологии:</strong> C++</span><span data-lang="en" hidden><strong>Technologies:</strong> C++</span></p>
                     <div class="description">
                         <ul>
-                            <li>Разработал программу, работающую с базой данных и упрощающую работу медицинских учреждений</li>
-                            <li>Реализовал загрузку и сохранение данных о пациентах мед. учреждения и множество иных операций над ними</li>
+                            <li>
+                            <span data-lang="ru">Разработал программу, работающую с базой данных и упрощающую работу медицинских учреждений</span>
+                            <span data-lang="en" hidden>Created program, that works with singlefiled database and makes work of medical facilities much easier.</span>
+                            </li>
+                            <li>
+                            <span data-lang="ru">Реализовал загрузку и сохранение данных о пациентах мед. учреждения и множество иных операций над ними</span>
+                            <span data-lang="en" hidden>Realised patient's data upload and save and even more operations with it.</span>
+                            </li>
                         </ul>
-                        <a href="https://github.com/vollar2045/kursach" target="_blank"><i class="fab fa-github"></i> Исходный код</a>
+                        <a href="https://github.com/vollar2045/kursach" target="_blank"><i class="fab fa-github"></i>
+                            <span data-lang="ru"> Исходный код</span>
+                            <span data-lang="en" hidden>Source code</span></a>
                     </div>
                 </div>
             </section>
 
-            <section id="languages" class="languages">
-                <h2><i class="fas fa-language"></i> Языки</h2>
-                <ul>
-                    <li><strong>Русский</strong> - носитель</li>
-                    <li><strong>Английский</strong> - B1 (свободный диалог, чтение тех. документации)</li>
-                </ul>
-            </section>
-
-            <section id="hobbies" class="hobbies">
-                <h2><i class="fas fa-heart"></i> Хобби</h2>
-                <ul>
-                    <li>Тренажерный зал <i class="fa-solid fa-dumbbell"></i></li>
-                    <li>Компьютерные игры <i class="fa-solid fa-gamepad"></i></li>
-                </ul>
+             <section id="education" class="education">
+                <h2><i class="fas fa-graduation-cap"></i><span data-lang="ru"> Образование</span><span data-lang="en" hidden> Education</span></h2>
+                <p><strong>2024-2028</strong><br>
+                <span data-lang="ru"><strong>Полоцкий государственный университет им. Евфросинии Полоцкой</strong><br>
+                Факультет информационных технологий<br>
+                Специальность: "Программная инженерия"<br>
+                <em>Студент 1-го курса</em></span>
+                <span data-lang="en" hidden><strong>Polotsk State University</strong><br>
+                Faculty of information technologies<br>
+                Speciality: "Software Engineering"<br>
+                <em>Student of first course</em>
+                </span>
+            </p>
             </section>
 
             <section id="achievements" class="achievements">
-                <h2><i class="fas fa-trophy"></i> Достижения</h2>
+                <h2><i class="fas fa-trophy"></i><span data-lang="ru"> Достижения</span></i><span data-lang="en" hidden> Achievements</span> </h2>
                 <ul>
-                    <li>Сдача всех экзаменов по программированию на 10 баллов (C/C++)</li>
-                    <li>Защита курсового проекта на тему: "База данных "Пациенты" на максимальную оценку</li>
+                    <li>
+                        <span data-lang="ru">Сдача всех экзаменов по программированию на 10 баллов (C/C++)</span>
+                        <span data-lang="en" hidden>Pass of all programming exams with the highest mark</span></li>
+                    <li>
+                        <span data-lang="ru">Защита курсового проекта на тему: "База данных "Пациенты" на максимальную оценку</span>
+                        <span data-lang="en" hidden>Term work: "Database "Patients" is protected on the highest mark.</span></li>
                 </ul>
-            </section>
-            <section id="contacts" class="contacts">
-                <h2><i class="fas fa-envelope"></i> Контакты</h2>
-                <ul>
-                    <li><i class="fas fa-envelope"></i> alieskin.vlad@gmail.com</li>
-                    <li><i class="fas fa-phone"></i> +375292651989</li>
-                    <li><a href="https://github.com/vollar2045" target="_blank"><i class="fab fa-github"></i> Github</a></li>                                     
-                </ul>
-            </section>
-
-            <section id="education" class="education">
-                <h2><i class="fas fa-graduation-cap"></i> Образование</h2>
-                <p><strong>2024-2028</strong><br>
-                <strong>Полоцкий государственный университет им. Евфросинии Полоцкой</strong><br>
-                Факультет информационных технологий<br>
-                Специальность: "Программная инженерия"<br>
-                <em>Студент 1-го курса</em></p>
             </section>
 
             <section id="skills" class="skills">
-                <h2><i class="fa-sharp fa-solid fa-star"></i> Навыки</h2>                
+                <h2><i class="fa-sharp fa-solid fa-star"></i><span data-lang="ru"> Навыки</span><span data-lang="en" hidden> Skills</span></h2>                
                 <div class="skill-item">
-                    <h3>C++ (STL, шаблоны, RAII)</h3>
+                    <h3><span data-lang="ru">C++ (STL, шаблоны, RAII)</span><span data-lang="en" hidden>C++(STL, templates, RAII)</span></h3>
                     <div class="skill-bar">
                         <div class="skill-level" data-level="80" style="width: 80%;">80%</div>
                     </div>
                 </div>                
                 <div class="skill-item">
-                    <h3>C# (WPF, Асинхронность)</h3>
+                    <h3><span data-lang="ru">C# (WPF, Асинхронность)</span><span data-lang="en" hidden>C#(WPF, asynchronous programs)</span></h3>
                     <div class="skill-bar">
                         <div class="skill-level" data-level="50" style="width: 50%;">50%</div>
                     </div>
                 </div>                
                 <div class="skill-item">
-                    <h3>Другое ПО (Visual Studio, Git)</h3>
+                    <h3><span data-lang="ru">Другое ПО(Visual Studio, Git)</span><span data-lang="en" hidden>Other software (Visual Studio, Git)</span></h3>
                     <div class="skill-bar">                        
                         <div class="skill-level" data-level="90" style="width: 90%;">90%</div>
                     </div>
                 </div>                
             </section>
+
+            <section id="languages" class="languages">
+                <h2><i class="fas fa-language"></i><span data-lang="ru"> Языки</span><span data-lang="en" hidden>Languages</span></h2>
+                <ul>
+                    <li><span data-lang="ru"><strong>Русский</strong> - носитель</span><span data-lang="en" hidden><strong>Russian</strong> - mother tongue</span></li>
+                    <li>
+                        <span data-lang="ru"><strong>Английский</strong> - B1 (свободный диалог, чтение тех. документации)</span>
+                        <span data-lang="en" hidden><strong>English</strong> - B1 (free conversation, reading of tech. documents)</span></li>
+                </ul>
+            </section>
+
+            <section id="hobbies" class="hobbies">
+                <h2><i class="fas fa-heart"></i><span data-lang="ru"> Хобби</span><span data-lang="en" hidden> Hobbies</span></h2>
+                <ul>
+                    <li><span data-lang="ru">Тренажерный зал<i class="fa-solid fa-dumbbell"></i></span><span data-lang="en" hidden>GYM<i class="fa-solid fa-dumbbell"></i></span></li>
+                    <li><span data-lang="ru">Компьютерные игры<i class="fa-solid fa-gamepad"></i></span><span data-lang="en" hidden>Computer games<i class="fa-solid fa-gamepad"></i></span></li>
+                </ul>
+            </section>            
+
+            <section id="contacts" class="contacts">
+                <h2><i class="fas fa-envelope"></i><span data-lang="ru">Контакты</span><span data-lang="en" hidden>Contacts</span></h2>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> alieskin.vlad@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +375292651989</li>
+                    <li><a href="https://github.com/vollar2045" target="_blank"><i class="fab fa-github"></i> Github</a></li>                                     
+                </ul>
+            </section>                     
         </main>
         </div>
         <a href="#top" class="scroll-top-btn" aria-label="Наверх">

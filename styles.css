@@ -360,6 +360,39 @@ a:hover::after {
     --angle-step: 0;
   }
 
+#lang-toggle {
+  position: fixed;  
+  top: 20px;     
+  right: 20px;     
+  z-index: 1000;   
+  padding: 8px 16px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+#lang-toggle:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+body.en [data-lang="ru"] {
+  display: none !important;
+}
+body.en [data-lang="en"] {
+  display: block !important;
+}
+
   @media (max-width: 480px) {
     .quick-link {
       width: 100%;

@@ -96,3 +96,27 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+document.getElementById('lang-toggle').addEventListener('click', function() {
+  const currentLang = this.textContent;
+  const newLang = currentLang === 'EN' ? 'RU' : 'EN';  
+
+  document.querySelectorAll('[data-lang="ru"]').forEach(el => {
+    el.style.display = newLang === 'RU' ? 'block' : 'none';
+  });
+  
+  document.querySelectorAll('[data-lang="en"]').forEach(el => {
+    el.style.display = newLang === 'EN' ? 'block' : 'none';
+  });
+  
+  this.textContent = newLang;  
+
+  localStorage.setItem('preferredLang', newLang);
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  const savedLang = localStorage.getItem('preferredLang') || 'RU';
+  if (savedLang === 'EN') {
+    document.getElementById('lang-toggle').click();
+  }
+});
